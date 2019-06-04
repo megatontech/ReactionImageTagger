@@ -55,6 +55,9 @@ namespace CeNiN_Winform
 
         public Form1()
         {
+#if DEBUG
+            MessageBox.Show("需要将trainset文件夹中的数据解压");
+#endif
             InitializeComponent();
             LoadInitData();
             MainForm.OnImageReconizeed += ShowImage;
