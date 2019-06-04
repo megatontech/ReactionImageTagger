@@ -50,14 +50,14 @@ namespace CeNiN_Winform
                         string decision = outputLayer.getDecision();
                         string imageTagStr = decision;
                         decision = decision.Split(',')[0];
-                        string pattern = "[A-Za-z0-9]";
-                        string strRet = "";
-                        MatchCollection results = Regex.Matches(decision, pattern);
-                        foreach (var v in results)
-                        {
-                            strRet += v.ToString();
-                        }
-                        decision = strRet;
+                        //string pattern = "[A-Za-z0-9]";
+                        //string strRet = "";
+                        //MatchCollection results = Regex.Matches(decision, pattern);
+                        //foreach (var v in results)
+                        //{
+                        //    strRet += v.ToString();
+                        //}
+                        //decision = strRet;
                         FileStream fileStream = new FileStream(item, FileMode.Open, FileAccess.Read);
                         int byteLength = (int)fileStream.Length;
                         byte[] fileBytes = new byte[byteLength];
