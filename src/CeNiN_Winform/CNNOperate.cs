@@ -63,8 +63,7 @@ namespace CeNiN_Winform
                         byte[] fileBytes = new byte[byteLength];
                         fileStream.Read(fileBytes, 0, byteLength);
                         fileStream.Close();
-                        MainForm.ImageLoad(fileBytes);
-                        MainForm.MessageSend(decision);
+                        
                         b.Dispose();
                         //add tag
                         //for (i = 2; i >= 0; i--) { imageTagStr += outputLayer.sortedClasses[i]+"|"; }
@@ -73,6 +72,8 @@ namespace CeNiN_Winform
                         FileOperate.CreateFolder(destFolder, decision);
                         //move file
                         FileOperate.MoveFile(destFolder + "\\" + decision, item);
+                        MainForm.ImageLoad(fileBytes);
+                        MainForm.MessageSend(decision);
                     }
                     catch (System.Exception e)
                     {

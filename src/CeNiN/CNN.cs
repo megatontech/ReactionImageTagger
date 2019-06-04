@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -51,7 +52,7 @@ namespace CeNiN
             try
             {
                 f = new FileStream(path, FileMode.Open);
-                br = new BinaryReader(f, Encoding.ASCII, false);
+                br = new BinaryReader(f, Encoding.UTF8, false);
                 char[] c = br.ReadChars(25);
                 if (!(new string(c)).Equals(CeNiN_FILE_HEADER))
                     throw new Exception("Invalid file header!");
@@ -141,7 +142,45 @@ namespace CeNiN
                         string[] classes = new string[classCount];
                         for (int i = 0; i < classCount; i++)
                             classes[i] = br.ReadString();
+                        
+                        if (File.Exists(Environment.CurrentDirectory + "\\" + "tran.txt"))
+                        {
+                            var tranList = File.ReadAllText(Environment.CurrentDirectory + "\\" + "tran.txt");
+                            var tempClass = JsonConvert.DeserializeObject<Dictionary<string,string>>(tranList);
+                            for (int i = 0; i < classes.Length; i++)
+                            {
+                                foreach (string s in tempClass.Keys)
+                                {
+                                    if (classes[i].Contains(s))
+                                    {
+                                        string value = "";
+                                        tempClass.TryGetValue(s, out value);
+                                        classes[i] = value;
+                                    }
+                                }
 
+                            }
+                        }
+                        else
+                        {
+                            Translate tran = new Translate();
+                            var tempClass = tran.GetResult(classes);
+                            for(int i = 0;i<classes.Length;i++)
+                            {
+                                foreach (string s in tempClass.Keys)
+                                {
+                                    if (classes[i].Contains(s))
+                                    {
+                                        string value = "";
+                                        tempClass.TryGetValue(s,out value);
+                                        classes[i] = value;
+                                    }
+                                }
+                               
+                            }
+                            string tranStr = JsonConvert.SerializeObject(tempClass);
+                            File.WriteAllText(Environment.CurrentDirectory + "\\" + "tran.txt",tranStr);
+                        }
                         SoftMax smLayer = new SoftMax(currentLayer.outputDims);
                         currentLayer.appendNext(smLayer);
                         outputLayer = new Output(smLayer.InputTensorDims, classes);
