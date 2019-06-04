@@ -73,6 +73,7 @@ namespace CeNiN_Winform
             cnnoper.InitCNN(System.Environment.CurrentDirectory, cnnFileLoc);
             if (cnn != null) { button2.Enabled = true; }
         }
+
         /// <summary>
         /// load cnn set
         /// </summary>
@@ -96,6 +97,7 @@ namespace CeNiN_Winform
             cnnoper.InitCNN(System.Environment.CurrentDirectory, opf.FileName);
             button2.Enabled = true;
         }
+
         /// <summary>
         /// load image
         /// </summary>
@@ -155,6 +157,7 @@ namespace CeNiN_Winform
         {
             textBox1.Text = text + "\r\n" + textBox1.Text;
         }
+
         /// <summary>
         /// stop operate
         /// </summary>

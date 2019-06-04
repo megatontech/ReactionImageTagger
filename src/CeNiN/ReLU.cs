@@ -24,7 +24,7 @@
 
 namespace CeNiN
 {
-    unsafe class ReLU : Layer
+    internal unsafe class ReLU : Layer
     {
         public ReLU(int[] inputTensorDims) : base(inputTensorDims)
         {

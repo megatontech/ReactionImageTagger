@@ -1,5 +1,4 @@
-﻿
-/*
+﻿/*
  *--------------------------------------------------------------------------
  * CeNiN > Layer.cs
  *--------------------------------------------------------------------------
@@ -30,6 +29,7 @@ namespace CeNiN
         public string type;
 
         private int[] inputTensorDims;
+
         public int[] InputTensorDims
         {
             get

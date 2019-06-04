@@ -75,7 +75,6 @@ namespace CeNiN
             possibleH.Dispose();
             possibleW.Dispose();
 
-
             possibleH = new Tensor(new int[] { filterHeight, 1 });
             for (int i = 0; i < filterHeight; i++)
                 possibleH.memPtr[i] = i;

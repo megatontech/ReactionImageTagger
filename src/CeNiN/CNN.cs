@@ -87,7 +87,7 @@ namespace CeNiN
                         int[] pad = new int[4];
                         for (int i = 0; i < 4; i++)
                             pad[i] = br.ReadByte();
-                        
+
                         int[] inputTensorDims = currentLayer.outputDims;
                         Conv cLayer = new Conv(inputTensorDims, pad);
 

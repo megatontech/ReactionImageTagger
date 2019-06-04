@@ -40,6 +40,7 @@ namespace CeNiN
         }
 
         private Bitmap resizedInputBmp;
+
         public Bitmap ResizedInputBmp
         {
             get
