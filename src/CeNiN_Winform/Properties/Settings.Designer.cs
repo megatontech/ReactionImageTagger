@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CeNiN_CSharp_Example.Properties
+namespace CeNiN_Winform.Properties
 {
 
 

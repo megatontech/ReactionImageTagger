@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace CeNiN_CSharp_Example
+namespace CeNiN_Winform
 {
     public static class FileOperate
     {
@@ -56,7 +56,7 @@ namespace CeNiN_CSharp_Example
             //{
             //    System.Diagnostics.Process p = new System.Diagnostics.Process();
             //    p.StartInfo.FileName = "regsvr32";
-            //    p.StartInfo.Arguments = @"/s D:\竞界科技\CeNiN\src\CeNiN_CSharp_Example\obj\Debug\Interop.DSOFile.dll";
+            //    p.StartInfo.Arguments = @"/s D:\竞界科技\CeNiN\src\CeNiN_Winform\obj\Debug\Interop.DSOFile.dll";
             //    p.Start();
             //    p.WaitForExit();
             //    p.Close();

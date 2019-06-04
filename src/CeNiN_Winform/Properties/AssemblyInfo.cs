@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CeNiN_CSharp_Example")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("CeNiN_Winform")]
+[assembly: AssemblyDescription("表情包分类工具")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CeNiN_CSharp_Example")]
+[assembly: AssemblyCompany("圣地亚哥农资集团")]
+[assembly: AssemblyProduct("CeNiN_Winform")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

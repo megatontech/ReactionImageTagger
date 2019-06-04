@@ -5,7 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace CeNiN_CSharp_Example
+namespace CeNiN_Winform
 {
     public class CNNOperate
     {
@@ -14,10 +14,10 @@ namespace CeNiN_CSharp_Example
 
         public void InitCNN(string folderStr, string ceninFile = "")
         {
-            string cnnFileLoc = System.Environment.CurrentDirectory + "\\" + "imagenet-vgg-verydeep-16.cenin";
+            string cnnFileLoc = System.Environment.CurrentDirectory + "\\TrainSet\\" + "imagenet-vgg-verydeep-16.cenin";
             if (string.IsNullOrEmpty(ceninFile))
             {
-                cnnFileLoc = System.Environment.CurrentDirectory + "\\" + "imagenet-vgg-verydeep-16.cenin";
+                cnnFileLoc = System.Environment.CurrentDirectory + "\\TrainSet\\" + "imagenet-vgg-verydeep-16.cenin";
             }
             else { cnnFileLoc = ceninFile; }
             cnn = new CNN(cnnFileLoc);
@@ -61,7 +61,7 @@ namespace CeNiN_CSharp_Example
                     byte[] fileBytes = new byte[byteLength];
                     fileStream.Read(fileBytes, 0, byteLength);
                     fileStream.Close();
-                    MainForm.ImageLoad(fileBytes);
+                    MainForm.ImageLoad(fileBytes); 
                     MainForm.MessageSend(decision);
                     b.Dispose();
                     //add tag

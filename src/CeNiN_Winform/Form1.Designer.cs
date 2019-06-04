@@ -1,4 +1,4 @@
-﻿namespace CeNiN_CSharp_Example
+﻿namespace CeNiN_Winform
 {
     partial class Form1
     {

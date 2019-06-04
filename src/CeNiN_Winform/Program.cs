@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CeNiN_CSharp_Example
+namespace CeNiN_Winform
 {
     static class Program
     {

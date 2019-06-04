@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CeNiN_CSharp_Example
+namespace CeNiN_Winform
 {
     public class MainForm
     {
